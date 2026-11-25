@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 9 - Web Storage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Web Storage Demo</h1>
+            <p>Save your preferences using localStorage and sessionStorage.</p>
+        </header>
+
+        <!-- Theme Settings -->
+        <section class="card">
+
+            <h2>Theme Settings</h2>
+
+            <p>Choose your preferred website theme.</p>
+
+            <div class="theme-buttons">
+                <button id="lightBtn">Light Mode</button>
+                <button id="darkBtn">Dark Mode</button>
+            </div>
+
+            <p id="themeMessage" class="message"></p>
+
+        </section>
+
+        <!-- Local Storage -->
+        <section class="card">
+
+            <h2>Local Storage</h2>
+
+            <p>
+                Your selected theme is saved in localStorage
+                and remains available after closing the browser.
+            </p>
+
+            <p class="storage-info">
+                Saved Theme: <strong id="savedTheme">None</strong>
+            </p>
+
+        </section>
+
+        <!-- Session Storage -->
+        <section class="card">
+
+            <h2>Session Storage</h2>
+
+            <p>
+                Enter a temporary note. It will remain available
+                during the current browser tab session.
+            </p>
+
+            <input
+                type="text"
+                id="noteInput"
+                placeholder="Enter your temporary note..."
+            >
+
+            <button id="saveNoteBtn">Save Session Note</button>
+
+            <p class="storage-info">
+                Saved Note: <strong id="savedNote">None</strong>
+            </p>
+
+        </section>
+
+        <!-- Clear Storage -->
+        <section class="card">
+
+            <h2>Storage Management</h2>
+
+            <button id="clearBtn" class="clear-btn">
+                Clear Saved Preferences
+            </button>
+
+            <p id="clearMessage" class="message"></p>
+
+        </section>
+
+        <footer>
+            <p>JavaScript Experiment 9 - Web Storage</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
