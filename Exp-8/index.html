@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 8 - Gym Admission Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>FITZONE GYM</h1>
+            <p>Join us today and start your fitness journey!</p>
+        </header>
+
+        <form id="gymForm" novalidate>
+
+            <h2>Gym Admission Form</h2>
+
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your full name"
+                >
+
+                <small id="nameError"></small>
+            </div>
+
+            <!-- Age -->
+            <div class="form-group">
+                <label for="age">Age</label>
+
+                <input
+                    type="number"
+                    id="age"
+                    placeholder="Enter your age"
+                >
+
+                <small id="ageError"></small>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                >
+
+                <small id="emailError"></small>
+            </div>
+
+            <!-- Mobile Number -->
+            <div class="form-group">
+                <label for="phone">Mobile Number</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter 10-digit mobile number"
+                    maxlength="10"
+                >
+
+                <small id="phoneError"></small>
+            </div>
+
+            <!-- Gender -->
+            <div class="form-group">
+                <label for="gender">Gender</label>
+
+                <select id="gender">
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <small id="genderError"></small>
+            </div>
+
+            <!-- Membership -->
+            <div class="form-group">
+                <label for="membership">Membership Plan</label>
+
+                <select id="membership">
+                    <option value="">Select Membership</option>
+                    <option value="Monthly">Monthly - ₹1500</option>
+                    <option value="Quarterly">Quarterly - ₹4000</option>
+                    <option value="Yearly">Yearly - ₹12000</option>
+                </select>
+
+                <small id="membershipError"></small>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit">Submit Admission</button>
+
+            <p id="successMessage"></p>
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
