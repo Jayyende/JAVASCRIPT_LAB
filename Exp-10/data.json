@@ -1,0 +1,35 @@
+
+{
+    "students": [
+        {
+            "id": 1,
+            "name": "Jay",
+            "course": "Data Science",
+            "marks": 85
+        },
+        {
+            "id": 2,
+            "name": "Rahul",
+            "course": "Computer Science",
+            "marks": 90
+        },
+        {
+            "id": 3,
+            "name": "Priya",
+            "course": "Information Technology",
+            "marks": 88
+        },
+        {
+            "id": 4,
+            "name": "Aman",
+            "course": "Data Science",
+            "marks": 78
+        },
+        {
+            "id": 5,
+            "name": "Sneha",
+            "course": "Computer Science",
+            "marks": 92
+        }
+    ]
+}
