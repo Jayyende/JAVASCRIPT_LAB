@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 4 - Palindrome Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Palindrome Checker</h1>
+
+        <p>Enter a word or sentence to check whether it is a palindrome.</p>
+
+        <form id="palindromeForm">
+
+            <input
+                type="text"
+                id="userInput"
+                placeholder="Enter a word or sentence"
+            >
+
+            <button type="submit">Check Palindrome</button>
+
+            <button type="reset" class="reset">Reset</button>
+
+        </form>
+
+        <div id="result" class="result"></div>
+
+        <p class="examples">
+            Examples: madam, level, radar, racecar
+        </p>
+
+        <p id="count">Checks performed: 0</p>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
