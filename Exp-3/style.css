@@ -1,0 +1,103 @@
+
+const form = document.getElementById("gradeForm");
+const result = document.getElementById("result");
+
+form.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    // Getting student name
+    let studentName = document.getElementById("studentName").value.trim();
+
+    // Getting marks from all input fields
+    let markInputs = document.querySelectorAll(".marks");
+
+    let marks = [];
+    let total = 0;
+
+    // Validating marks using a loop
+    for (let i = 0; i < markInputs.length; i++) {
+
+        let value = markInputs[i].value;
+
+        if (value.trim() === "") {
+            alert("Please enter all subject marks.");
+            return;
+        }
+
+        let mark = Number(value);
+
+        if (!Number.isFinite(mark) || mark < 0 || mark > 100) {
+            alert("Marks must be between 0 and 100.");
+            return;
+        }
+
+        marks.push(mark);
+        total += mark;
+    }
+
+    // Calculating average
+    let average = total / marks.length;
+
+    // Checking whether student passed all subjects
+    let passed = true;
+
+    for (let mark of marks) {
+        if (mark < 40) {
+            passed = false;
+            break;
+        }
+    }
+
+    // Assigning grade using if-else
+    let grade;
+
+    if (!passed) {
+        grade = "F";
+    }
+    else if (average >= 90) {
+        grade = "A+";
+    }
+    else if (average >= 80) {
+        grade = "A";
+    }
+    else if (average >= 70) {
+        grade = "B";
+    }
+    else if (average >= 60) {
+        grade = "C";
+    }
+    else if (average >= 50) {
+        grade = "D";
+    }
+    else {
+        grade = "E";
+    }
+
+    // Displaying result
+    result.style.display = "block";
+
+    result.innerHTML = `
+        <h2>Student Result</h2>
+        <p><strong>Name:</strong> ${studentName}</p>
+        <p><strong>Total Marks:</strong> ${total} / 500</p>
+        <p><strong>Average:</strong> ${average.toFixed(2)}%</p>
+        <p><strong>Grade:</strong> ${grade}</p>
+        <p class="${passed ? 'pass' : 'fail'}">
+            ${passed ? "PASS" : "FAIL"}
+        </p>
+    `;
+
+    console.log("Student Name:", studentName);
+    console.log("Marks:", marks);
+    console.log("Total:", total);
+    console.log("Average:", average);
+    console.log("Grade:", grade);
+
+});
+
+// Resetting result when form is cleared
+form.addEventListener("reset", function() {
+    result.style.display = "none";
+    result.innerHTML = "";
+});
