@@ -1,0 +1,163 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #263445;
+    min-height: 100vh;
+    padding: 30px 15px;
+    transition: 0.3s;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #2563eb;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+header p {
+    color: #777;
+    font-size: 14px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.card h2 {
+    margin-bottom: 12px;
+    color: #2563eb;
+    font-size: 20px;
+}
+
+.card p {
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.theme-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.storage-info {
+    margin-top: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd4df;
+    border-radius: 6px;
+    margin: 15px 0 10px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.clear-btn {
+    background: #dc3545;
+}
+
+.message {
+    margin-top: 12px;
+    color: #16803c;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+    padding: 10px;
+}
+
+/* Dark Theme */
+
+body.dark {
+    background: #171923;
+    color: #f1f1f1;
+}
+
+body.dark header h1 {
+    color: #8ab4ff;
+}
+
+body.dark header p {
+    color: #bbb;
+}
+
+body.dark .card {
+    background: #252a38;
+    color: #f1f1f1;
+}
+
+body.dark .card h2 {
+    color: #8ab4ff;
+}
+
+body.dark input {
+    background: #171923;
+    color: white;
+    border-color: #555;
+}
+
+body.dark input::placeholder {
+    color: #aaa;
+}
+
+body.dark footer {
+    color: #aaa;
+}
+
+@media (max-width: 500px) {
+    .card {
+        padding: 18px;
+    }
+
+    .theme-buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
