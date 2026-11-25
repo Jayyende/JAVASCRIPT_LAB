@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 6 - String and Regex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>String & Regex Analyzer</h1>
+            <p>Validate emails, extract information and analyze text.</p>
+        </header>
+
+        <!-- Email Validation -->
+        <section class="box">
+            <h2>Email Validation</h2>
+
+            <input
+                type="text"
+                id="emailInput"
+                placeholder="Enter your email address"
+            >
+
+            <button id="validateBtn">Validate Email</button>
+
+            <p id="emailResult" class="message"></p>
+        </section>
+
+        <!-- Text Analysis -->
+        <section class="box">
+            <h2>Text Analysis</h2>
+
+            <textarea
+                id="textInput"
+                rows="5"
+                placeholder="Enter your text here..."
+            ></textarea>
+
+            <button id="analyzeBtn">Analyze Text</button>
+
+            <div id="analysisResult" class="result">
+                <div class="stats">
+                    <div class="stat">
+                        <h3 id="charCount">0</h3>
+                        <p>Characters</p>
+                    </div>
+
+                    <div class="stat">
+                        <h3 id="wordCount">0</h3>
+                        <p>Words</p>
+                    </div>
+
+                    <div class="stat">
+                        <h3 id="vowelCount">0</h3>
+                        <p>Vowels</p>
+                    </div>
+                </div>
+
+                <p><strong>Uppercase:</strong> <span id="upperText"></span></p>
+                <p><strong>Lowercase:</strong> <span id="lowerText"></span></p>
+            </div>
+        </section>
+
+        <!-- Email Extraction -->
+        <section class="box">
+            <h2>Email Extraction</h2>
+
+            <textarea
+                id="extractInput"
+                rows="4"
+                placeholder="Enter text containing email addresses..."
+            ></textarea>
+
+            <button id="extractBtn">Extract Emails</button>
+
+            <div id="extractResult" class="message"></div>
+        </section>
+
+        <!-- Word Replacement -->
+        <section class="box">
+            <h2>Word Replacement</h2>
+
+            <input
+                type="text"
+                id="originalWord"
+                placeholder="Enter word to replace"
+            >
+
+            <input
+                type="text"
+                id="newWord"
+                placeholder="Enter new word"
+            >
+
+            <button id="replaceBtn">Replace Word</button>
+
+            <p id="replaceResult" class="message"></p>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
