@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 10 - JSON Data Loading</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Student Data Management</h1>
+            <p>Load and display JSON data using Fetch API and jQuery.</p>
+        </header>
+
+        <section class="card">
+
+            <h2>Load Student Records</h2>
+
+            <div class="button-group">
+
+                <button id="fetchBtn">
+                    Load Using Fetch API
+                </button>
+
+                <button id="jqueryBtn">
+                    Load Using jQuery
+                </button>
+
+            </div>
+
+            <p id="statusMessage"></p>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Student Records</h2>
+
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Course</th>
+                            <th>Marks</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTable">
+
+                        <tr>
+                            <td colspan="4" class="empty">
+                                Click a button to load student records.
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p>JavaScript Experiment 10 - JSON Data Loading</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
